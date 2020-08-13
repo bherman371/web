@@ -1,0 +1,66 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/main.js",
+  "engines": {
+    "node": "12.10.0"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "node server.js",
+    "test": "cypress run",
+    "cy:open": "cypress open",
+    "ci": "start-server-and-test serve 8080 test"
+  },
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.1.1",
+    "@sentry/browser": "^5.14.0",
+    "@sentry/integrations": "^5.14.0",
+    "bootstrap-select": "^1.13.16",
+    "bootstrap-vue": "^2.15.0",
+    "core-js": "^2.6.5",
+    "cypress": "^4.3.0",
+    "cypress-cucumber-preprocessor": "^2.2.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-html": "^6.0.0",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "register-service-worker": "^1.6.2",
+    "uniqid": "^5.2.0",
+    "vee-validate": "^3.3.0",
+    "vue": "^2.6.10",
+    "vue-beautiful-chat": "^2.3.1",
+    "vue-carousel": "^0.18.0",
+    "vue-password": "^2.0.4",
+    "vue-router": "^3.0.3",
+    "vue-slick": "^1.1.15",
+    "vuex": "^3.0.1",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-pwa": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "cypress-file-upload": "^4.0.7",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "install": "^0.13.0",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "start-server-and-test": "^1.11.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

@@ -1,0 +1,72 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:10.15.3
+
+clone:
+  depth: full
+
+options:
+  max-time: 10
+
+pipelines:
+  default:
+    - step:
+          name: code_analyse
+          caches:
+            - npm
+            - cypress
+          image: cypress/base:10
+          script:
+            - npm ci
+            - npm run lint
+            - npm run ci
+    # - step:
+    #       name: unit_tests
+    #       caches:
+    #         - npm
+    #       script:
+    #         - npm ci
+    #         - npm run test:unit
+    # - step:
+    #       name: e2e_tests
+    #       caches:
+    #         - npm
+    #         - cypress
+    #       image: cypress/base:10
+    #       script:
+    #         - ./run_e2e_tests.sh
+  branches:
+    master:
+      - step:
+            name: code_analyse
+            caches:
+              - npm
+            script:
+              - npm ci
+              - npm run lint
+      - step:
+            name: build
+            caches:
+              - npm
+            script:
+              - ./build.sh
+      - step:
+            name: heroku
+            script:
+              - npm install -g heroku
+              - git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git HEAD
+
+
+    # - step:
+    #     name: Component Tests
+    #     caches:
+    #       - npm
+    #     script:
+    #       - npm run component-test
+definitions:
+  caches:
+    npm: ~/.npm
+    cypress: ~/.cache

@@ -1,0 +1,25 @@
+export const getNewItem = state => state.new_item
+export const getNewItemImage = state => state.new_item.image
+export const getNewItemImageOrientation = state => state.new_item.image_orientation
+export const getNewItemTitle = state => state.new_item.title
+export const getNewItemDescription = state => state.new_item.description
+export const getNewItemType = state => state.new_item.type
+export const getNewItemPaymentType = state => state.new_item.payment_type
+export const getNewItemPaymentValue = state => state.new_item.payment_value
+export const getNewItemPaymentFree = state => state.new_item.free
+export const getNewItemCategory = state => state.new_item.category
+export const getNewItemCondition = state => state.new_item.condition
+export const getImageFile = state => state.image_file
+export const getItemProfile = state => state.item_profile
+export const getNewItemPaymentCash = state => state.new_item.cash
+export const getNewItemPaymentPoints = state => state.new_item.points
+export const getItemSearchResults = state => state.item_search_results
+// export const getItemSearchQuery = state => state.item_search_query
+export const getUserInventory = state => state.user_inventory
+export const getSearchResult = state => state.search_result
+export const getSearchAutocompleteResult = state => state.search_autocomplete
+export const getQuery = state => state.item_search_query
+export const getItemMessages = state => state.item_messages
+export const getPostItemResponse = state => state.post_item_response
+export const getItemRequestsMade = state => state.item_requests_made
+export const getItemRequestsReceived = state => state.item_requests_received

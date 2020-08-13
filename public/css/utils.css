@@ -1,0 +1,90 @@
+.VuePassword__Container {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+.VuePassword__Input {
+  border: 1px solid #cbd5e0;
+  border-radius: 0.125rem;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+
+.VuePassword__Input--has-toggle {
+  padding-right: 3rem;
+}
+
+.VuePassword__Toggle {
+  align-items: center;
+  background: none;
+  border: none;
+  bottom: 0;
+  color: #718096;
+  display: flex;
+  margin-right: 0.75rem;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.VuePassword__Toggle:hover {
+  color: #4a5568;
+  transition: color 0.3s ease-in-out;
+}
+
+.VuePassword__Toggle-Icon {
+  fill: currentColor;
+  pointer-events: none;
+  width: 1rem;
+}
+
+.VuePassword__Meter {
+  color: rgb(175, 175, 175);
+  display: flex;
+  height: 0.25rem;
+  margin-left: -0.25%;
+  margin-right: -0.25%;
+  margin-top: 0.125rem;
+}
+
+.VuePassword__Meter svg {
+  fill: currentColor;
+  height: 100%;
+  padding-left: 0.25%;
+  padding-right: 0.25%;
+  transition: all 0.6s ease-in-out;
+  width: 25%;
+}
+
+.VuePassword--very-weak {
+  color: rgb(175, 175, 175);
+}
+
+.VuePassword--weak {
+  color: #e53e3e;
+}
+
+.VuePassword--medium {
+  color: #fc8181;
+}
+
+.VuePassword--good {
+  color: #68d391;
+}
+
+.VuePassword--great {
+  color: #38a169;
+}
+
+.VuePassword__Message {
+  cursor: default;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: right;
+  text-transform: uppercase;
+}
